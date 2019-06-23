@@ -12,45 +12,30 @@ This is a web-app that allows you to see news articles from different sources ar
 ## User Stories
  
 Behaviors that the application implements for use by a user.
-As a user I would like:
+As a user I would like to:
 <ul>
-<li>To create an account with my details.</li>
-<li>Store my existing login information.</li>
-<li>Generate a password for a new account.</li>
-<li>Copy my credentials to the clipboard.</li>
+<li>See various news sources.</li>
+<li>Select the ones they prefer.</li>
+<li>See the top news articles from that news source.</li>
+<li>See the image,description and the time the news article was created.</li>
+<li>Click on an article and read it fully from the news source.</li>
 </ul>
 
-## Insallation Requirements
-<ul>
-<li>python3.6</li><br>
-<li>pip</li><br>
-<li>pyperclip</li><br>
-<li>xclip</li><br>
-</ul>
-
-## Cloning
-<ul>
-<li>Open your terminal
-</li>
-</ul>
-
-`$ git clone https://github.com/Soniawangui/Password-Locker`<br/>
-`$ cd Password-locker`
-
-## Running the Application
-<ul>
-<li>To run the app in your terminal:</li>
-</ul>
-
-`$ chmod +x password-locker.py`<br/>
-`$ ./password-locker.py`
 
 ## Running the App
 <ul>
-<li> In your terminal:</li>
+<li> To run the in your terminal</li>
 </ul>
 
-`$ ./start.sh`
+`$ chmod +x start.sh`
+`$./start.sh`
+
+## Testing the App
+<ul>
+<li> To run the tests for the class files</li>
+</ul>
+
+`$ python3.6 manage.py tests`
 
 
 ## Known Bugs
