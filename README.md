@@ -27,7 +27,7 @@ As a user I would like to:
 <li> To run the in your terminal</li>
 </ul>
 
-`$ chmod +x start.sh`
+`$ chmod +x start.sh`<br/>
 `$./start.sh`
 
 ## Testing the App
