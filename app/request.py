@@ -2,37 +2,38 @@
 import urllib.request,json
 from .models import Source,Article
 
+
 # Source = source.Source
  
 #  Getting api key
 api_key = None
 # Getting the news base url
-source_base_url = None
+base_url = None
 article_base_url = None 
 
 def configure_request(app):
 	'''
 	Function to acquire the api key and base urls
 	'''
-	global api_Key,source_base_url,article_base_url
-	api_Key = app.config['NEWS_API_KEY']
-	source_base_url = app.config['NEWS_SOURCE_BASE_URL']
-	article_base_url = app.config['NEWS_ARTICLE_BASE_URL']
+	global api_key,source_base_url,article_base_url
+	api_key = app.config['NEWS_API_KEY']
+	base_url = app.config['NEWS_API_BASE_URL']
+	article_base_url = app.config['EVERYTHING_SOURCE_BASE_URL']
 
-def get_source(id):
+def get_sources(category):
   '''
   Function that gets the json response to our url request
   '''
-  get_source_url = base_url.format(id,api_key)
+  get_sources_url = base_url.format(category,api_key)
 
   with urrlib.request.urlopen(get_source) as url:
-    get_source_data = url.read()
-    get_source_response = json.loads(get_source_data)
+    get_sources_data = url.read()
+    get_sources_response = json.loads(get_sources_data)
 
     source_results = None
 
-    if get_source_response['source']:
-      source_results_list = get_source_response['source']
+    if get_sources_response['sources']:
+      source_results_list = get_sources_response['sources']
       source_results = process_results(source_results_list) 
 
   return source_results
@@ -81,7 +82,7 @@ def process_article(article_results):
           article_object = Article(author,title,description,url,image,date)
           article_list.append(article_object)
 
-    return source_list     
+    return source_list
 
  
    
