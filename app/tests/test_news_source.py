@@ -11,7 +11,15 @@ class SourceTest(unittest.TestCase):
       '''
       Set up method that will run before every Test
       '''
-      self.new_source = Source('Ebola out-break scare','https://edition.cnn.com/2019/06/22/health/ebola-outbreak-congo-intl/index.html')
+      self.new_source = Source('Ebola out-break scare','https://edition.cnn.com/2019/06/22/health/ebola-outbreak-congo-intl/index.html')from flask import render_template
+from app import app
+
+@app.errorhandler(404)
+def four_Ow_four(error):
+  '''
+  Function to render the 404 error page
+  '''
+  return render_template('fourOwfour.html'),404
 
     def test_isSourceinstance(self):
       '''
