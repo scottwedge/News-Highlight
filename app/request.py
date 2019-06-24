@@ -38,30 +38,6 @@ def get_source(id):
   return source_results
 
  
-def process_results(source_list):
-    '''
-    Function that processes the source result and transform them to a list of objects
-    
-    Args:
-        source_list: A list of dictionaries that contain source details
-
-    Returns :
-        source_results: A list of source objects
-    '''
-    source_list = []
-    for source_item in source_results:
-        id = source_item.get('id')
-        name = source_item.get('name')
-        description = source_item.get('description')
-        url = source_item.get('url')
-        category = source_item.get('category')
-
-    source_object = Source(id,name,description,url,category)
-    source_list.append(source_object)
-
-    return source_list     
-
-
 def get_article(source):
   '''
   Function that gets the json response to our url request
