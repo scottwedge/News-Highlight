@@ -16,7 +16,7 @@ def index():
     entertainment_source = get_source('entertainment')
     tech_source = get_source('tech')
 
-    title = 'Home -Welcome to the number one News Website Online'
+    title = 'Home - Welcome to the number one News Website Online'
 
     return render_template('index.html',title = title,popular = popular_source,business = business_source,general = general_source,sport = sport_source,entertainment = entertainment_source,tech = tech_source)
 
@@ -25,4 +25,8 @@ def source(source_id):
     '''
     View function that returns the source page and its data
     '''
-    return render_template('source.html',id = source_id)    
+    # Getting articles according to source chosen
+	  # articles = get_articles(id)
+	  # source_id = id.upper()
+	  # title = f'{source_id} - Top Articles'
+    # return render_template('source.html',id = source_id)    
