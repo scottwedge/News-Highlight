@@ -20,9 +20,33 @@ def get_source(category):
 
     source_results = None
 
-    if get_source_response['results']:
-      source_results_list = get_source_response['results']
+    if get_source_response['source']:
+      source_results_list = get_source_response['source']
       source_results = process_results(source_results_list) 
 
   return source_results
+
+def process_results(source_list)
+    '''
+    Function that processes the source result and transform them to a list of objects
     
+    Args:
+        source_list: A list of dictionaries that contain source details
+
+    Returns :
+        source_results: A list of source objects
+    '''
+    source_results = []
+    for source_item in source_list:
+        id = source_item.get('id')
+        name = source_item.get('name')
+        description = source_item.get('description')
+        url = source_item.get('url')
+        category = source_item.get('category')
+
+        
+            source_object = Source(id,name,description,url,category)
+            source_results.append(source_object)
+
+    return source_results        
+
