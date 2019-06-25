@@ -2,7 +2,7 @@
 {% macro displaySourcesList(categories) %}
 	{% for category in categories %}
 		<div class="col-md-3" class="source" style="margin: 20px;border: 2px solid #ccc;background-image: url('static/images/background1.jpg'); background-size: cover; background-color: rgb(114, 177, 202) ;height: 150px;padding: 60px 0px;border-radius: 4px;box-shadow: 0 0 25px darkgray">	
-			<a href="/Sources/{{id}}">	
+			<a href="{{category.url}}">	
 					<p class="text-center" style="font-style: bold;font-size: 18px;background-color: rgba(0,0,0,1);">{{category.name}}</p>
 				
 			</a>
