@@ -19,7 +19,7 @@ def index():
 
     title = 'Home - Welcome to the number one News Website Online'
 
-    return render_template('index.html',title = title,business = business_source,general = general_source,sport = sport_source,entertainment = entertainment_source,tech = tech_source)
+    return render_template('index.html',title = title,business = business_sources,general = general_sources,sport = sport_sources,entertainment = entertainment_sources,tech = tech_sources)
 
 @main.route('/source/<id>')
 def source(source_id):
