@@ -98,7 +98,7 @@ def process_article(article_results):
         description = article_item.get('description')
         url = article_item.get('url')
         image = article_item.get('urlToImage')
-        date = article_item.get('publishedate')
+        date = article_item.get('publishedat')
 
         if date and author and image:
 

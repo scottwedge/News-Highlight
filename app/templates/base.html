@@ -1,6 +1,11 @@
 {% extends 'bootstrap/base.html'%}
+{% block styles %}
+{{ super() }}
+<link href="https://fonts.googleapis.com/css?family=Cookie&display=swap" rel="stylesheet">
 
- <!-- Navbar block  --> 
+<link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+{% endblock %}
+ <!-- Navbar block   -->
 {% block navbar %}
 {% include 'navbar.html' %}
 {% endblock %}

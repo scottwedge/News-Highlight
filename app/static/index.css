@@ -32,7 +32,7 @@ hr{
 /*FOOTER STYLES*/
 footer{
 	margin-top: 100px;
-	background-color: lightgrey;
+	background-color: rgb(106, 156, 189);
 	width:100%;
 	margin-bottom: 0px;
 	bottom: 0%
@@ -42,4 +42,7 @@ footer h4{
 	font-weight: bold;
 	padding: 50px
 
+}
+body{
+	background-color: #364156;
 }
