@@ -1,6 +1,6 @@
 from flask import render_template,request,redirect,url_for
 from  . import main
-from ..request import get_source,get_article
+from ..request import get_sources,get_article
 from ..models import Source
 
 #views
@@ -11,11 +11,11 @@ def index():
     '''
 
     # Getting sources according to category
-    business_source = get_sources('business')
-    general_source = get_sources('general')
-    sport_source = get_sources('sport')
-    entertainment_source = get_sources('entertainment')
-    tech_source = get_sources('tech')
+    business_sources = get_sources('business')
+    general_sources = get_sources('general')
+    sport_sources = get_sources('sport')
+    entertainment_sources = get_sources('entertainment')
+    tech_sources = get_sources('tech')
 
     title = 'Home - Welcome to the number one News Website Online'
 
