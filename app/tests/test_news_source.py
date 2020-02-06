@@ -1,11 +1,8 @@
 import unittest
 import app
 import app.models
-#from app.models import source 
 from app.models import Source 
-#Source = source.Source
 from flask import render_template
-#from app import app
 
 class SourceTest(unittest.TestCase):
     '''
@@ -19,8 +16,6 @@ class SourceTest(unittest.TestCase):
       self.new_source = Source(name = 'Ebola out-break scare',url = 'https://edition.cnn.com/2019/06/22/health/ebola-outbreak-congo-intl/index.html',id = 'id',description = 'description', category = 'category')
 
 
-#from flask import render_template
-#from app import app
 
     #@app.errorhandler(404)
     def four_Ow_four(error):
