@@ -16,7 +16,7 @@ class SourceTest(unittest.TestCase):
       '''
       Set up method that will run before every Test
       '''
-      self.new_source = Source('Ebola out-break scare','https://edition.cnn.com/2019/06/22/health/ebola-outbreak-congo-intl/index.html')
+      self.new_source = Source(name = 'Ebola out-break scare',url = 'https://edition.cnn.com/2019/06/22/health/ebola-outbreak-congo-intl/index.html',id = 'id',description = 'description', category = 'category')
 
 
 #from flask import render_template

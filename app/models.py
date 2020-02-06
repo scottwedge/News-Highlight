@@ -36,10 +36,10 @@ class Article:
 			6. date
     '''  
       self.author = id
-      self.title = name
+      self.title = title
       self.description = description
       self.url = url
-      self.image = category
+      self.image = image
       self.date = date
   
             
