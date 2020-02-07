@@ -6,8 +6,9 @@ app = create_app('development')
 
 manager = Manager(app)
 manager.add_command('server', Server)
-manager.command
 
+
+@manager.command
 def test():
     """Run the unit tests."""
     import unittest
